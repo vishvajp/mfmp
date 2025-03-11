@@ -1,0 +1,151 @@
+.footer-section {
+    background-color: #2a2a2a;
+    padding: 50px 0;
+    padding-top: 5rem !important;
+  }
+  
+  .footer-section .text-white {
+    color: #ffffff;
+  }
+  
+  .footer-section .footer-logo img {
+    max-width: 150px;
+  }
+  
+  .footer-section .footer-social a {
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .footer-section p {
+    font-family: Avenir-Normal;
+  }
+  
+  .footer-section h4 {
+    font-family: Avenir-Normal;
+    border-bottom: 2px solid #28a745;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section ul {
+    padding-left: 0;
+  }
+  
+  .footer-section ul li {
+    list-style: none;
+  }
+  
+  .footer-section ul li a {
+    font-family: Avenir-Normal;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ff791f;
+  }
+  
+  .footer-section .footer-news-item a {
+    font-family: Avenir-Normal;
+    font-weight: 900;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-section .footer-news-item p {
+    font-family: Avenir-Normal;
+    color: #ff791f;
+    text-decoration: none;
+  }
+  
+  .footer-section .footer-news-item a:hover {
+    color: #28a745;
+  }
+  
+  .footer-section .footer-subscribe input {
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section .footer-subscribe button {
+    background-color: #ff791f;
+    border: none;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 25px;
+  }
+  
+  .footer-section .footer-subscribe button i {
+    margin-right: 5px;
+  }
+  
+  /* copyright text starts*/
+  .copyright-text {
+    font-family: Avenir-Normal;
+    display: flex;
+    color: #0e0e0e;
+    justify-content: center;
+    padding: 5px 0 5px 0;
+    background-color: #ff791f;
+  }
+  
+  .copyright-text a {
+    font-family: Avenir-Bold;
+    color: #0e0e0e;
+    text-decoration: none;
+  }
+  /* copyright text ends*/
+  
+  #toTopBtn {
+    position: fixed;
+    bottom: 26px;
+    right: 39px;
+    z-index: 98;
+    padding: 21px;
+    background-color: #ff791f;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5) !important;
+  }
+  
+  .js .cd-top--fade-out {
+    opacity: 0.5;
+  }
+  
+  .js .cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .js .cd-top {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
+  }
+  
+  .cd-top {
+    position: fixed;
+    bottom: 20px;
+    bottom: var(--cd-back-to-top-margin);
+    right: 20px;
+    right: var(--cd-back-to-top-margin);
+    display: inline-block;
+    height: 40px;
+    height: var(--cd-back-to-top-size);
+    width: 40px;
+    width: var(--cd-back-to-top-size);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05) !important;
+    background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg)
+      no-repeat center 50%;
+    background-color: hsla(5, 76%, 62%, 0.8);
+    background-color: hsla(
+      var(--cd-color-3-h),
+      var(--cd-color-3-s),
+      var(--cd-color-3-l),
+      0.8
+    );
+  }
+  

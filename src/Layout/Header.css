@@ -1,0 +1,156 @@
+:root {
+    --font-bold: 'Poppins', sans-serif;
+    --font-normal: 'Montserrat', sans-serif;
+    --font-thin: 'Poppins', sans-serif;
+    --primary-color: #ff791f;
+    --text-color: #333;
+}
+
+/* Apply global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--bs-body-font-family);
+    font-weight: var(--bs-body-font-weight);
+  }
+
+/* Navbar Styling */
+.navbar {
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: #fff;
+    /* height: 92px; */
+}
+.navbar-collapse{
+   
+    justify-content: space-evenly !important;
+}
+
+.nav-item{
+    font-size: 16px;
+    color: black;
+}
+
+.navbarShadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.navbarBrand img {
+    height: 65px;
+}
+
+.navbarLight .navbarNav .navLink {
+    color: var(--text-color);
+    font-family: var(--font-normal);
+    font-weight: 400;
+}
+
+.navbarNav .navItem {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.navbarLight .navbarNav .navItemActive .navLink {
+    color: var(--primary-color) !important;
+}
+
+.navbarLight .navbarNav .navLink:hover {
+    color: var(--primary-color);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+}
+.hidden-navbar {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.visible-navbar {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+/* Button Styling */
+.btn-downloadtheapp {
+    background-color: #ff791f;
+    color: white;
+    font-family: Avenir-Normal;
+    font-weight: bold;
+    border: none;
+    padding: 7px 17px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 0 5px 0 5px;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-downloadtheapp:hover {
+    background-color: #ff791f;
+    color: #333;
+}
+
+.btn-whatsapp i {
+    font-size: 20px;
+}
+
+.btnOrange:hover {
+    background-color: var(--primary-color);
+}
+
+.navbar-toggler-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.navbar-toggler{
+    padding: 2px 5px !important
+}
+
+
+@media (min-width: 992px) {
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse {
+        background-color:white;
+        display: flex
+;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-nav {
+        text-align: right;
+        width: 100%;
+    }
+}

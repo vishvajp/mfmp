@@ -1,0 +1,805 @@
+/* Theme
+#ff791f  orange
+#055e73  blue 
+Avenir LT Std - Bold Font - Avenir-Bold
+Aileron - slim font - Aileron-Thin
+Avenir - paragraph - Avenir-Normal */
+.header {
+  transition: top 0.3s ease-in-out;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.hidden {
+  top: -100px; /* Moves the header out of view */
+}
+
+.visible {
+  top: 0; /* Moves the header back into view */
+}
+
+
+.bpm-container {
+    width: 100%;
+    padding-top: 92px;
+  }
+  .bpm-container .home-banner {
+    width: 100%;
+    position: relative;
+  }
+  
+  .bpm-container .slick-carousel .banner-slide {
+    position: relative;
+  }
+  
+  .bpm-container .btn-get-started {
+    font-family: Avenir-Normal;
+    position: absolute;
+    bottom: 150px;
+    left: 14%;
+    transform: translateX(-50%);
+    background-color: #ff791f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .bpm-container .btn-get-started:hover {
+    background-color: #ff791f;
+  }
+  
+  .bpm-container .btn-contact-us {
+    font-family: Avenir-Normal;
+    position: absolute;
+    bottom: 150px;
+    left: 43%;
+    transform: translateX(-50%);
+    background-color: #ff791f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .bpm-container .btn-contact-us:hover {
+    background-color: #ff791f;
+  }
+  
+  .bpm-container .slick-carousel img {
+    width: 100%;
+    height: max-content;
+  }
+  
+  .bpm-container .slick-slide {
+    height: fit-content;
+  }
+  
+  .bpm-container .slick-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .bpm-container .slick-prev,
+  .bpm-container .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .bpm-container .slick-prev {
+    left: 10px;
+  }
+  
+  .bpm-container .slick-next {
+    right: 10px;
+  }
+  
+  .bpm-container .slick-prev:hover,
+  .bpm-container .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .bpm-container .slick-dots li.slick-active button:before {
+    color: #ff791f;
+  }
+  .bpm-container .slick-dots li button:before {
+    color: #333;
+  }
+  
+  .about b {
+    font-family: Avenir-Bold !important;
+    color: #055e73;
+    font-weight: 900;
+  }
+  
+  .about .text-highlight {
+    color: #ff791f;
+    font-family: Avenir-Normal;
+  }
+  
+  .about .btn-orange {
+    font-family: Avenir-Normal;
+    background-color: #ff791f;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+  }
+  
+  .about .btn-orange:hover {
+    background-color: #ff791f;
+    color: #333;
+  }
+  
+  .about .container {
+    width: 90%;
+    position: relative;
+    background-image: url("../Images/myfood.png");
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .about .container img.about-image {
+    max-width: 100%;
+    height: auto;
+    float: left;
+  }
+  
+  .about .container .row {
+    align-items: flex-start;
+  }
+  
+  .about .container p {
+       /* font-family: Aileron-Thin; */
+       text-align: center;
+       font-size: 1em;
+       line-height: 1.5;
+       color: #333;
+       font-weight: 400;
+  }
+  
+  .decor-image {
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .decor-image-1 {
+    left: 0;
+    bottom: -60px;
+    width: 200px;
+    height: auto;
+  }
+  
+  .decor-image-2 {
+    right: 0;
+    top: 30%;
+    width: 100px;
+    height: auto;
+  }
+  
+  .decor-image-3 {
+    right: 0;
+    bottom: -30px;
+    width: 120px;
+    height: auto;
+  }
+
+  .btn-close{
+   
+    right: 2px !important;
+    top: 3px !important;
+  }
+  
+  @media (max-width: 767px) {
+    .about .container .row {
+      text-align: center;
+    }
+  
+    .about .container img.about-image {
+      float: none;
+      margin: 20px 0;
+    }
+  
+    .decor-image-1,
+    .decor-image-2,
+    .decor-image-3 {
+      display: none;
+    }
+  }
+  
+  .how-it-works-main {
+    background-image: url("../Images/bg4.png");
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    padding-top: 2.5rem;
+  }
+  .how-it-works {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  
+  .how-it-works .text-highlight {
+    color: #ff791f;
+    font-family: Avenir-Normal;
+    font-weight: 100 !important;
+  }
+  
+  .how-it-works .container-inside {
+    max-width: 85%;
+    margin: 0 auto;
+    background-image: url("../Images/line.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 25%;
+  }
+  .how-it-works .btn-orange {
+    font-family: Avenir-Normal;
+    background-color: #ff791f;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+  }
+  
+  .how-it-works .btn-orange:hover {
+    background-color: #ff791f;
+    color: #333;
+  }
+  
+  .how-it-works .how-it-works-card {
+    border: 2px solid transparent;
+    padding: 0 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .how-it-works .how-it-works-card.middle-card {
+    /* border-color: #ff791f; */
+    border-color: rgba(255, 121, 31, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .how-it-works .how-it-works-card h3 {
+    color: #055e73;
+    font-family: Avenir-Bold;
+    font-weight: 600 !important;
+    font-size: 1.4rem;
+    margin-bottom: 0px;
+  }
+  
+  .how-it-works .how-it-works-card img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+  
+  .how-it-works .how-it-works-card:hover {
+    background-color: #fff;
+    border-color: #ff791f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .how-it-works h2 {
+    color: #055e73;
+    font-family: Avenir-Bold;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .how-it-works p {
+    /*font-family: Aileron-Thin;*/
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  @media (max-width: 767px) {
+    .how-it-works-card {
+      margin-bottom: 20px;
+    }
+  
+    .how-it-works h2 {
+      font-size: 2rem;
+    }
+  
+    .how-it-works p {
+      font-size: 1rem;
+    }
+  
+    .how-it-works-main {
+      background-image: none;
+      padding: 0px;
+    }
+    .how-it-works{
+      margin-bottom: 0px;
+      margin-top: 10px;
+    }
+  }
+  
+  .call-to-action-section {
+    /* background-color: #005f73; */
+    background-image:url("../Images/calltoaction-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 25%;
+    color: white;
+    position: relative;
+  }
+  
+  .call-to-action-section .highlight {
+    color: #ff5722;
+  }
+  
+  .call-to-action-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .call-to-action-section p {
+    font-family: Avenir-Normal;
+    font-size: 1.2rem;
+  }
+  
+  .call-to-action-section .app-download-buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  
+  .call-to-action-section .app-download-buttons a {
+    margin-right: 15px;
+  }
+  
+  .call-to-action-section .app-download-buttons img {
+    max-width: 210px;
+  }
+  
+  .call-to-action-section .app-download-buttons .qr {
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    max-width: 150px;
+  }
+  
+  .call-to-action-section .phone-image {
+    width: 100%; /* Adjust the size of the phone image */
+  }
+  
+  @media (max-width: 767px) {
+    .call-to-action-section h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .call-to-action-section p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    .call-to-action-section .app-download-buttons img {
+      max-width: 90px;
+    
+    }
+
+    .call-to-action-section{
+      margin-top: 20px;
+    }
+  }
+  
+  .why-choose-section {
+    background-color: #fff;
+  }
+  
+  .why-choose-section h2 {
+    color: #055e73;
+    font-weight: bold;
+  }
+  .why-choose-section p {
+    /*font-family: Aileron-Thin;*/
+  }
+  
+  .why-choose-section .highlight {
+    font-family: Avenir-Normal;
+    color: #ff791f;
+    font-weight: 100;
+  }
+  
+  .why-choose-section .feature-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    flex-grow: 1;
+  }
+  
+  .why-choose-section .left-most-card {
+    border-bottom-left-radius: 20px;
+  }
+  
+  .why-choose-section .right-most-card {
+    border-bottom-right-radius: 20px;
+  }
+  
+  .why-choose-section .feature-card img {
+    max-width: 65px;
+  }
+  
+  .why-choose-section .feature-card h4 {
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: left;
+    color: #055e73;
+    font-weight: 600;
+  }
+  
+  .why-choose-section .feature-card p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-align: left;
+    font-weight: 400;
+    color: #333;
+}
+  
+  .why-choose-section .feature-card:hover {
+    background-color: #ff791f;
+  }
+
+  .why-choose-section .left-most-card {
+    border-bottom-left-radius: 20px;
+}
+
+.why-choose-section .right-most-card {
+  border-bottom-right-radius: 20px;
+}
+  
+  .why-choose-section .feature-card:hover h4,
+  .why-choose-section .feature-card:hover p {
+    color: #fff;
+  }
+  
+  .why-choose-section .highlighted-card {
+    background-image: url("../Images/blue.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: calc(100% + 10px);
+  }
+  
+  .why-choose-section .highlighted-card:hover {
+    background-color: unset;
+  }
+  
+  .why-choose-section .why-choose-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .why-choose-section .why-choose-section p {
+    font-size: 1.2rem;
+  }
+  
+  .why-choose-section {
+    position: relative;
+  }
+  
+  .chicken-image {
+    width: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+    z-index: 1;
+  }
+  
+  @media (max-width: 767px) {
+    .why-choose-section h2 {
+      font-size: 2rem;
+    }
+  
+    .why-choose-section p {
+      font-size: 1rem;
+    }
+  
+    .why-choose-section .feature-card img {
+      max-width: 40px;
+    }
+  
+    .why-choose-section .feature-card h4 {
+      font-size: 1rem;
+    }
+  
+    .why-choose-section .feature-card p {
+      font-size: 0.8rem;
+    }
+  
+    .chicken-image {
+      width: 80px;
+      top: -40px;
+    }
+    .call-to-action-section{
+      background-size: cover;
+    }
+  }
+  
+  .testimonials-section {
+    background-image: url("../Images/test5-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+  }
+  
+  .testimonials-section .how-to-use-header {
+    width: 70%;
+    height: auto;
+    padding: 20px;
+    background-color: #ff791f;
+    border: 5px solid #fff;
+    border-radius: 25px;
+    margin: auto;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .testimonials-section .how-to-use-header .how-to-use-text {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  .testimonials-section .how-to-use-header h2 {
+    font-family: Avenir-Bold;
+    font-size: 2.5rem;
+    color: #055e73;
+    font-weight: 700;
+  }
+  
+  .testimonials-section .how-to-use-header h1 {
+    font-family: Avenir-Normal;
+    font-size: 2.8rem;
+    color: #fff;
+    font-weight: 100;
+  }
+  
+  .testimonials-section .play-button img {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .testimonials-section .testimonials-section h3 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .testimonials-section .highlight {
+    font-family: Avenir-Normal;
+    color: #ff791f;
+  }
+  
+  .testimonials-section .testimonial-carousel {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .testimonials-section .testimonial-carousel .slick-track {
+    margin: 1rem !important;
+  }
+  
+  .testimonials-section .testimonial-item {
+    width: 350px !important;
+    height: min-content;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+  
+  }
+  
+  .testimonials-section .testimonial-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #797979;
+  }
+  
+  .testimonials-section .testimonial-content img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .testimonials-section .testimonial-content .rating {
+    color: #ff791f;
+  }
+  
+  .testimonials-section .testimonial-content h4 {
+    font-size: 1rem;
+    color: #ff791f;
+    font-weight: 600;
+  }
+  
+  .testimonials-section .testimonial-content p {
+    font-family: Avenir-Normal;
+  }
+  
+  
+  .testimonials-section .testimonial-content .position {
+    font-family: Avenir-Normal;
+    font-size: 0.8rem;
+    color: #888;
+  }
+  
+  .testimonials-section .testimonial-controls {
+    margin-top: 20px;
+  }
+  
+  .testimonials-section .testimonial-controls .btn {
+    background-color: #055e73;
+    color: #fff;
+    border: none;
+  }
+  
+  .testimonials-section .testimonial-controls .btn i {
+    font-size: 1rem;
+  }
+  
+  /* investor section */
+  
+  .investor-section {
+    background-color: #fff;
+    background-image: url("../Images/bg.png");
+    background-size: contain;
+    background-position: center;
+    color: #fff;
+  }
+
+  .investor-section .container {
+    padding-top: 7rem;
+}
+  
+  .investor-section .text-highlight {
+    color: #ff791f;
+  }
+  
+  .investor-section .text-white {
+    /*font-family: Aileron-Thin;*/
+    font-weight: lighter;
+  }
+  
+  .investor-section .btn-orange {
+    background-color: #ff791f;
+    font-family: Avenir-Normal;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+  }
+  
+  .investor-section .btn-orange:hover {
+    background-color: #e67e22;
+    color: #fff;
+  }
+  
+  .investor-section .businessman {
+    width: 100%;
+    height: auto;
+  }
+  
+  .investor-section .biryani {
+    width: 90%;
+    height: auto;
+    position: relative;
+    top: 80px;
+  }
+
+  .gallery-section h2{
+    color: #055e73;
+    font-weight: 600;
+  }
+
+  .blog-image{
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px gray;
+ 
+  }
+
+  .first-content-blog-div{
+    border: 2px solid #ff791f;
+    border-radius: 25px;
+  }
+
+  .first-content-blog-learn-btn{
+    font-family: Avenir-Normal;
+    background-color: #ff791f;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+  }
+
+  .first-content-blog-learn-btn:hover{
+color: black;
+background-color: #ff791f;
+  }
+  
+  @media (max-width: 767px) {
+    .investor-section .businessman,
+    .investor-section .biryani {
+        max-width: 150px;
+    }
+  
+    .investor-section .text-center {
+        margin-top: 20px;
+    }
+
+    .investor-section{
+      background-size: cover;
+    }
+
+    .investor-section .biryani{
+      top:0px;
+      left:20%
+    }
+    .testimonials-section .how-to-use-header h1{
+      font-size: 25px;
+    }
+
+    .testimonials-section .how-to-use-header h2 {
+      font-size: 18px;
+    }
+    .testimonials-section{
+      padding: 0px;
+    }
+    .gallery-section{
+      padding: 0px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .h2, h2 {
+        font-size: 2rem;
+    }
+}
+  
