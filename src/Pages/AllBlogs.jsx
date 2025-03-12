@@ -13,7 +13,7 @@ const AllBlogs = () => {
   const [allBlogData, setAllBlogData] = useState(null);
   const [pagination, setPagination] = useState(null);
   const handleSingleBlog = (blog) => {
-    window.scrollTo(0, 0);
+    
     navigate("/blog/details", { state: blog });
   };
 

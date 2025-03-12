@@ -697,8 +697,8 @@ Avenir - paragraph - Avenir-Normal */
   }
   
   .investor-section .text-white {
-    /*font-family: Aileron-Thin;*/
-    font-weight: lighter;
+    font-size: 0.9rem;
+    font-weight: 400;
   }
   
   .investor-section .btn-orange {
@@ -710,6 +710,9 @@ Avenir - paragraph - Avenir-Normal */
     padding: 10px 20px;
     border-radius: 25px;
   }
+
+   
+
   
   .investor-section .btn-orange:hover {
     background-color: #e67e22;

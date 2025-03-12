@@ -60,6 +60,10 @@
     color: #ff791f;
     text-decoration: none;
   }
+
+  .icon-orange {
+    color: #ff791f;
+}
   
   .footer-section .footer-news-item a:hover {
     color: #28a745;

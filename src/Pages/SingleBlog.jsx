@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "../Layout/Header";
 import "../Asset/Css/SingleBlog.css";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -7,6 +7,10 @@ const SingleBlog = () => {
   const location = useLocation();
   const blog = location.state;
   const navigate = useNavigate()
+
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const formatDate = (dateString) => {
     // Ensure the date string is in the correct format for parsing
@@ -44,7 +48,7 @@ const SingleBlog = () => {
 
             <div className="text-center mt-4">
               <button onClick={()=> navigate("/blogs")} className="blog-back-button">
-                Back to Main Page
+                Back to Blogs Page
               </button>
             </div>
           </div>

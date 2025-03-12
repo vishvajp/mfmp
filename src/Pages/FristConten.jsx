@@ -321,9 +321,7 @@ const FristConten = () => {
               WHY CHOOSE <span className="highlight">MyFoodMyPrice?</span>
             </h2>
             <p className="text-center">
-              Latin words, combined with a handful of model sentence structures,
-              to generate <br />
-              Lorem Ipsum which looks reasonable.
+            Choosing MyFoodMyPrice means embracing a smarter way to dine. Our platform offers unparalleled savings through prebooking, making quality meals affordable for everyone. The unique bidding system adds excitement to your dining experience, allowing you to control the price you pay. For restaurants, MyFoodMyPrice provides predictable sales and reduces food wastage, ensuring more efficient operations. Join the growing community of savvy diners and innovative restaurants transforming the food industry with MyFoodMyPrice.
             </p>
             <div className="row justify-content-center mt-4">
               {features.map((feature, index) => (
@@ -482,8 +480,7 @@ const FristConten = () => {
                   LOOKING TO <span className="text-white">INVEST?</span>
                 </h2>
                 <p className="text-white">
-                  Brief information on investment opportunities, projected
-                  returns, and contact details.
+                Be part of the next big thing in food tech by investing in MyFoodMyPrice. Our Franchisee Invested Company Operated (FICO) model allows you to benefit from passive income while we handle all operations, from marketing to customer management. With low investment options and the potential for high returns, MyFoodMyPrice is expanding rapidly across India and internationally. Partner with us and help bring this revolutionary platform to new cities, supporting local restaurants and transforming the dining experience for customers.
                 </p>
                 <button
                   className="btn btn-orange"
