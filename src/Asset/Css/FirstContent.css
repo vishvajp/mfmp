@@ -345,6 +345,12 @@ Avenir - paragraph - Avenir-Normal */
       margin-bottom: 0px;
       margin-top: 10px;
     }
+
+
+  }
+
+  .investor-section .container{
+    padding-top: 7rem;
   }
   
   .call-to-action-section {
@@ -427,9 +433,7 @@ Avenir - paragraph - Avenir-Normal */
     color: #055e73;
     font-weight: bold;
   }
-  .why-choose-section p {
-    /*font-family: Aileron-Thin;*/
-  }
+
   
   .why-choose-section .highlight {
     font-family: Avenir-Normal;
@@ -688,9 +692,6 @@ Avenir - paragraph - Avenir-Normal */
     color: #fff;
   }
 
-  .investor-section .container {
-    padding-top: 7rem;
-}
   
   .investor-section .text-highlight {
     color: #ff791f;
@@ -770,17 +771,21 @@ background-color: #ff791f;
   @media (max-width: 767px) {
     .investor-section .businessman,
     .investor-section .biryani {
-        max-width: 150px;
+        max-width: 55%;
     }
   
     .investor-section .text-center {
         margin-top: 20px;
     }
 
-    .investor-section{
+    .investor-section {
+      background-image: url("../Images/bg-bottom.png");
       background-size: cover;
-    }
+  }
 
+  .investor-section .container {
+    padding-top: 12rem;
+}
     .investor-section .biryani{
       top:0px;
       left:20%
@@ -798,6 +803,18 @@ background-color: #ff791f;
     .gallery-section{
       padding: 0px;
     }
+    .investor-section .row {
+      text-align: center;
+      flex-direction: column-reverse;
+  }
+  .investor-section .text-highlight {
+    font-size: 2rem;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+}
   }
 
   @media (min-width: 1200px) {

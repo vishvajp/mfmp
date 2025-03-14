@@ -255,7 +255,7 @@ const FristConten = () => {
                 </div>
               </div>
             </div>
-            <div className="text-center mt-1  "></div>
+            <div className="text-center mt-1  ">
             <a
               target="_blank"
               href="https://play.google.com/store/apps/details?id=com.biryanipalayam.myfoodmyprice&amp;pli=1"
@@ -263,6 +263,8 @@ const FristConten = () => {
             >
               DOWNLOAD THE APP
             </a>
+            </div>
+         
           </div>
         </div>
 
@@ -327,12 +329,12 @@ const FristConten = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`col-md-2 d-flex ${
+                  className={`col-md-2 mb-2 col-6 d-flex ${
                     index === 0 ? "left-most-card" : ""
-                  } ${index === features.length - 1 ? "right-most-card" : ""}`}
+                  } ${index === features.length - 1 ? "right-most-card" : ""} ${index === 2 ? "d-none d-md-block" : ""}`}
                 >
                   {index === 2 ? (
-                    <div className="feature-card text-center p-3 highlighted-card"></div>
+                    <div className="feature-card text-center p-3 highlighted-card "></div>
                   ) : (
                     <div className="feature-card text-center p-3">
                       <div className="d-flex align-items-start">
@@ -467,7 +469,7 @@ const FristConten = () => {
           <div className="container">
             <div className="row align-items-end">
               {/* Left side with businessman image */}
-              <div className="col-md-3 text-left">
+              <div className="col-md-3 text-center text-md-left">
                 <img
                   src={menImg}
                   alt="Businessman"
@@ -475,7 +477,7 @@ const FristConten = () => {
                 />
               </div>
               {/* Middle side with text and button */}
-              <div className="col-md-5 text-start mb-3">
+              <div className="col-md-5 text-center text-md-start mb-3">
                 <h2 className="text-highlight">
                   LOOKING TO <span className="text-white">INVEST?</span>
                 </h2>
@@ -490,7 +492,7 @@ const FristConten = () => {
                 </button>
               </div>
               {/* Right side with biryani image */}
-              <div className="col-md-4 text-right">
+              <div className="col-md-4 d-none d-md-block text-right">
                 <img
                   src={briyani1}
                   alt="Biryani"

@@ -2,42 +2,51 @@ import React, { useEffect, useState } from "react";
 import "../Asset/Css/ContacUs.css";
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
-import emailjs from "@emailjs/browser";
+import axios from "axios";
 
 const ContactUs = () => {
+  const Base_Url = process.env.REACT_APP_BASE_URL;
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const [formData, setFormData] = useState({
-    to_name: "MFMP Team", // Default recipient name
-    from_name: "",
-    from_email: "",
+    name: "",
+    email: "",
+    mobile: "",
     message: "",
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-};
+  };
 
-const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    emailjs.send(
-        "service_6mp18m8",   // Replace with your EmailJS Service ID
-        "template_04qfshl",  // Replace with your EmailJS Template ID
-        formData,
-        "8J_bUEsWOCpjzHV4P"    // Replace with your EmailJS Public Key
-    )
-    .then(response => {
-        alert("Email sent successfully!");
-        setFormData({ to_name: "MFMP Team", from_name: "", from_email: "", message: "" }); // Reset form
-    })
-    .catch(error => {
-        console.error("Error sending email:", error);
-        alert("Failed to send email.");
-    });
-};
+    if (loading) return;
+    setLoading(true);
+    try {
+      const response = await axios.post(
+        `${Base_Url}sendMailContactUsLandingPg`,
+        formData
+      );
+      console.log(response.data);
+      if (response.data) {
+        alert("We have recieved you form");
+        setFormData({
+          name: "",
+          email: "",
+          mobile: "",
+          message: "",
+        });
+      }
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoading(false); // Reset loading state
+    }
+  };
 
   return (
     <div>
@@ -46,28 +55,41 @@ const handleSubmit = (e) => {
         <div class="row">
           <div class="col-md-6 order-md-2 contact-form">
             <h1>Send us a message</h1>
-            <form
-              onSubmit={handleSubmit}
-            >
+            <form onSubmit={handleSubmit}>
               <div class="form-group">
                 <input
                   type="text"
-                  name="from_name"
+                  name="name"
                   className="form-control"
                   placeholder="Name"
-                  value={formData.from_name} 
-                  onChange={handleChange} 
+                  value={formData.name}
+                  onChange={handleChange}
                   required
                 ></input>
               </div>
               <div class="form-group">
                 <input
+                  type="text"
+                  name="mobile"
+                  className="form-control"
+                  placeholder="Mobile"
+                  value={formData.mobile}
+                  onChange={(e) => {
+                    const value = e.target.value.replace(/[^0-9]/g, "");
+                    setFormData((prevData) => ({ ...prevData, mobile: value }));
+                  }}
+                  required
+                  maxLength={10}
+                />
+              </div>
+              <div class="form-group">
+                <input
                   type="email"
-                  name="from_email"
+                  name="email"
                   className="form-control"
                   placeholder="Email"
-                  value={formData.from_email} 
-                onChange={handleChange} 
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                 ></input>
               </div>
@@ -76,19 +98,19 @@ const handleSubmit = (e) => {
                   placeholder="Message"
                   class="form-control"
                   name="message"
-                  value={formData.message} 
-                onChange={handleChange}
+                  value={formData.message}
+                  onChange={handleChange}
                   rows="4"
-                  require
+                  required
                 ></textarea>
               </div>
               <div class="form-group d-flex justify-content-end">
                 <button
                   type="submit"
-                
+                  disabled={loading}
                   class="btn btn-lg btn-block btn-primary"
                 >
-                  Send Message
+                  {loading ? "Sending...." : "Send Message"}
                 </button>
               </div>
             </form>

@@ -5,24 +5,31 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./Header.css";
 import logo from "../Asset/Images/MFMP-logo-1.jpg";
 
-
 const Header = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  
   const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
+      
+      // Hide navbar when scrolling down and show when scrolling up
       setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+
+      // Close the mobile menu when scrolling up
+      if (prevScrollPos > currentScrollPos && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+
       setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+  }, [prevScrollPos, isMobileMenuOpen]);
 
   return (
     <nav
@@ -40,15 +47,14 @@ const Header = () => {
       <button
         className="navbar-toggler"
         type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-controls="navbarNav"
-        aria-expanded="false"
+        aria-expanded={isMobileMenuOpen}
         aria-label="Toggle navigation"
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
+      <div className={`collapse navbar-collapse ${isMobileMenuOpen ? "show" : ""}`} id="navbarNav">
         <ul className="navbar-nav ">
           <li className="nav-item">
             <Link
@@ -57,6 +63,7 @@ const Header = () => {
               onClick={(e) => {
                 e.preventDefault();
                 navigate("/");
+                setIsMobileMenuOpen(false);
                 setTimeout(() => {
                   const aboutSection = document.getElementById("home");
                   if (aboutSection) {

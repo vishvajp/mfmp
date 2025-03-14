@@ -17,6 +17,10 @@ const AllBlogs = () => {
     navigate("/blog/details", { state: blog });
   };
 
+   useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
   useEffect(() => {
     const blogData = async () => {
       window.scrollTo(0, 0);
@@ -114,21 +118,23 @@ const AllBlogs = () => {
           ))}
         </div>
         <div className="d-flex justify-content-end gap-2">
-          <button
-            disabled={pagination?.prev_page_url ? false : true}
-            onClick={handlePreview}
-            className="first-content-blog-learn-btn"
-          >
-          <IoArrowBackCircleOutline className="blog-back-icon" />
-          Previous
-          </button>
-          <button
+        {pagination?.prev_page_url &&  <button
+          
+          onClick={handlePreview}
           className="first-content-blog-learn-btn"
-            disabled={pagination?.next_page_url ? false : true}
+        >
+        <IoArrowBackCircleOutline className="blog-back-icon" />
+        Previous
+        </button>}
+         
+          {pagination?.next_page_url &&  <button
+          className="first-content-blog-learn-btn"
+           
             onClick={handleNext}
           >
           <IoArrowForwardCircleOutline className="blog-back-icon" />  Next
-          </button>
+          </button>}
+         
         </div>
       </div> : 
       <div className="d-flex justify-content-center">
